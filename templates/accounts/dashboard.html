@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="dashboard-banner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-4 title">Profil de {{ user.username }}</h1>
+        <p class="lead">
+          Gestion de profil
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'partials/_alerts.html' %}
+
+<section id="dashboard" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Bienvenue {{ user.username }}</h2>
+        {% if contacts %}
+        <p>Liste de toutes les demandes d'information</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Propriété</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for contact in contacts %}
+            <tr>
+              <td>{{ contact.id }}</td>
+              <td>{{ contact.listing }}</td>
+              <td>
+                <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">Voir le bien immobilier</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <p>Vous n'avez fait aucune demande d'information pour l'instant</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

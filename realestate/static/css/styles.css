@@ -1,0 +1,128 @@
+body {
+  margin-top: 0;
+}
+
+.bg-primary {
+  background-color: #00796B!important;
+}
+
+.btn-secondary {
+  color: #fff !important;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+}
+
+.navbar {
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+#banner {
+  background: url(../img/banner.jpg) fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  color: #000;
+  padding-top: 6rem;
+}
+
+#banner .home-search {
+  min-height: 400px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#banner button.btn.btn-secondary.btn-block.mt-4 {
+  background-color: #00796B;
+}
+
+
+#services {
+  background: url(../img/building.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+#listings-banner {
+  background: url(../img/listing-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 180px;
+  color: #000;
+}
+
+#listings i.fas.text-secondary, i.fas {
+  color: #00796B!important
+}
+
+
+#listings .price {
+  color: #00796B
+}
+
+#listings .title {
+  color: #00796B;
+}
+
+#listings a.btn {
+  background-color: #00796B;
+}
+
+#listing button {
+  background-color: #00796B;
+  border: none
+}
+
+#listing a.btn.btn-light {
+  border: 1px solid #00796B
+}
+
+#listing-banner .title, #listing-banner .lead {
+  color: #000
+}
+
+#listing-banner {
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+}
+
+
+#search .search-form {
+  border-radius: 5px;
+}
+
+#search button.btn.btn-secondary.btn-block.mt-4 {
+  background-color: #00796B;
+}
+
+#login input.btn.btn-secondary, #resgiter input.btn.btn-secondary  {
+  background-color: #00796B;
+}
+
+#login i.fas ,#register i.fas {
+  color: #FFF;
+}
+
+.modal input.btn.btn-block.btn-secondary {
+  background-color: #00796B;
+
+}
+
+#dashboard-banner {
+  background-color: rgb(228, 228, 228);
+  padding: 10px;
+}
+
+#dashboard-banner .title, #dashboard-banner .lead {
+  color: #000
+}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="listings-banner" class="py-5 text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1 class="display-4">Liste des biens</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="listings" class="py-4">
+  <div class="container">
+    <div class="row">
+      {% include 'partials/_alerts.html' %}
+
+      {% if listings %}
+      {% for listing in listings %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card listing-preview">
+          <img class="card-img-top" src="{{listing.photo_main.url}}" alt="Maison">
+          <div class="card-body">
+            <div class="listing-heading text-center">
+              <h4 class="title">{{listing.title}}</h4>
+              <p>
+                <i class="fas fa-map-marker text-secondary"></i> {{listing.city}} {{listing.postcode}}
+              </p>
+              <h2 class="price text-center">{{listing.price}} €</h2>
+
+            </div>
+            <hr>
+            <div class="row py-2 text-secondary">
+              <div class="col-6">
+                <i class="fas fa-th-large"></i> Surface: {{listing.square_meters}} m²
+              </div>
+              <div class="col-6">
+                <i class="fas fa-car"></i> Garage: {{listing.garage}}
+              </div>
+            </div>
+            <div class="row py-2 text-secondary">
+              <div class="col-6">
+                <i class="fas fa-bed"></i> Chambres: {{listing.bedrooms}}
+              </div>
+              <div class="col-6">
+                <i class="fas fa-bath"></i> Salle de Bain: {{listing.bathrooms}}
+              </div>
+            </div>
+            <hr>
+            <div class="row py-2 text-secondary">
+              <div class="col-12">
+                <i class="fas fa-user"></i> {{listing.realtor}}
+              </div>
+            </div>
+            <div class="row text-secondary pb-2">
+              <div class="col-6">
+                <i class="fas fa-clock"></i> {{listing.list_date}}
+              </div>
+            </div>
+            <hr>
+            <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">Plus d'info</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>Aucun biens en vente ou à la location</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
