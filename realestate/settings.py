@@ -93,7 +93,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'sunrealestateDB',
+            'NAME': 'sunrealestatedb',
             'USER': 'admin',
             'PASSWORD': 'Senegal1983',
             'HOST': 'localhost',
